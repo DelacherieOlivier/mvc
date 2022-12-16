@@ -28,7 +28,7 @@ class TodoModel extends SQL
     }
 
     function getAllTermine(): array | null{
-        $stmt = SQL::getPdo()->prepare("SELECT * FROM todos JOIN user ON users.id = todos.user.id WHERE termine = 0");
+        $stmt = SQL::getPdo()->prepare("SELECT * FROM todos JOIN users ON users.id = todos.user_id WHERE termine = 0");
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_OBJ);
     }

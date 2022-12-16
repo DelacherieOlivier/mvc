@@ -17,6 +17,7 @@
                     <li class="list-group-item">
                         <div class="d-flex">
                             <div class="flex-grow-1 align-self-center"><?= $todo->texte ?></div>
+                            <div class="flex-grow-1 align-self-center"><?= $todo->nom ?> <?= $todo->prenom ?></div>
                             <div>
                                 <?php if ($todo->termine == 0) { ?>
                                     <a href="./terminer?id=<?= $todo->id ?>" class="btn btn-outline-success">
