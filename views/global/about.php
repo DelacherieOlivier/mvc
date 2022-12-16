@@ -2,7 +2,8 @@
     <div class="row">
         <div class="card">
             <div class="card-body">
-                <h3>À Propos</h3>
+                <h1><?= $titre ?></h1>
+                <p>La date d'aujourd'hui est : <?= $date ?></p>
             </div>
         </div>
     </div>

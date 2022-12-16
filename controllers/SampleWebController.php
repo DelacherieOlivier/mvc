@@ -16,4 +16,10 @@ class SampleWebController extends WebController
     {
         return "Voilà votre paramètre : $parametre";
     }
+
+    function about()
+    {
+        return Template::render("views/global/about.php", array("titre" => "À Propos", "date" => date("d-m-Y à H:i")));
+    }
+
 }

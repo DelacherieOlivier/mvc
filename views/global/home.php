@@ -13,6 +13,7 @@
                 </ul>
 
                 <div class="text-center">Page générée le <?= $date ?></div>
+
             </div>
         </div>
     </div>
