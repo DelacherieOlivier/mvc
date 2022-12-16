@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body p-2">
             <!-- Action -->
-            <form action="./ajouter" method="post" class="add">
+            <form action="/ajouter" method="post" class="add">
                 <div class="input-group">
                     <input id="texte" name="texte" type="text" class="form-control" placeholder="Prendre une note…"
                            aria-label="My new idea" aria-describedby="basic-addon1"/>

@@ -3,6 +3,8 @@
 namespace routes;
 
 use controllers\AuthControler;
+use controllers\ClientController;
+use controllers\FicheControleur;
 use controllers\SampleWebController;
 use controllers\TodoWeb;
 use routes\base\Route;
@@ -16,6 +18,8 @@ class Web
         $main = new SampleWebController();
         $todo = new TodoWeb();
         $auth = new AuthControler();
+        $client = new ClientController();
+        $fiche = new FicheControleur();
 
         // Appel la méthode « home » dans le contrôleur $main.
 
@@ -29,6 +33,8 @@ class Web
             Route::Add('/ajouter', [$todo, 'ajouter']);
             Route::Add('/terminer', [$todo, 'terminer']);
             Route::Add('/supprimer', [$todo, 'supprimer']);
+            Route::Add('/clients', [$client, 'liste']);
+            Route::Add('/client/{id}', [$fiche, 'fiche']);
         } else {
             Route::Add('/', function () {
                 header('Location: /login');
